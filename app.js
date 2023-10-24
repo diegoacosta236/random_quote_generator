@@ -8,8 +8,8 @@ let getQuote = () => {
     fetch(api)
         .then((data) => data.json())
         .then((item) => {
-            quote.innerText = item.content;
-            author.innerText = item.author;
+            quote.innerText = `"` + item.content + `"`;
+            author.innerText = "- " + item.author;
         })
 }
 
